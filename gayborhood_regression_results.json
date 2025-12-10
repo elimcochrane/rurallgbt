@@ -1,0 +1,100 @@
+{
+  "analysis_title": "Regression Analysis: Predictors of Gayborhood Count",
+  "date_generated": "2024",
+  "regressions": {
+    "population": {
+      "predictor": "Population (millions)",
+      "equation": "Gayborhoods = 0.304 \u00d7 Population + 0.178",
+      "r_squared": 0.485,
+      "variance_explained_pct": 48.5,
+      "correlation": 0.696,
+      "p_value": "< 0.001",
+      "coefficient": 0.304,
+      "intercept": 0.178,
+      "interpretation": "Each additional 1 million people predicts 0.304 more gayborhoods"
+    },
+    "population_density": {
+      "predictor": "Population Density (per sq mi)",
+      "equation": "Gayborhoods = 0.0047 \u00d7 Density + 1.250",
+      "r_squared": 0.159,
+      "variance_explained_pct": 15.9,
+      "correlation": 0.399,
+      "p_value": "< 0.001",
+      "coefficient": 0.0047,
+      "intercept": 1.25,
+      "interpretation": "Each additional 100 people/sq mi predicts 0.474 more gayborhoods"
+    },
+    "party_affiliation": {
+      "predictor": "Party Affiliation",
+      "democratic_mean": 3.28,
+      "democratic_sd": 4.43,
+      "republican_mean": 1.73,
+      "republican_sd": 2.57,
+      "difference": 1.54,
+      "r_squared": 0.049,
+      "variance_explained_pct": 4.9,
+      "t_statistic": 1.533,
+      "p_value": "< 0.001",
+      "effect_size_multiplier": 0.9,
+      "interpretation": "Democratic states have 0.9x more gayborhoods on average"
+    },
+    "region": {
+      "predictor": "Region",
+      "means_by_region": {
+        "NE": {
+          "mean": 3.73,
+          "sd": 5.0
+        },
+        "Midwest": {
+          "mean": 2.9,
+          "sd": 2.88
+        },
+        "West": {
+          "mean": 2.6,
+          "sd": 4.22
+        },
+        "South": {
+          "mean": 1.79,
+          "sd": 2.67
+        },
+        "Mountain": {
+          "mean": 0.5,
+          "sd": 0.71
+        }
+      },
+      "f_statistic": 1.43,
+      "p_value": 0.241,
+      "eta_squared": 0.112,
+      "variance_explained_pct": 11.2,
+      "interpretation": "Region explains 11.2% of variance in gayborhood count"
+    }
+  },
+  "summary": {
+    "predictive_power_ranking": [
+      {
+        "rank": 1,
+        "predictor": "Population",
+        "r_squared": 0.485,
+        "variance_pct": 48.5
+      },
+      {
+        "rank": 2,
+        "predictor": "Population Density",
+        "r_squared": 0.159,
+        "variance_pct": 15.9
+      },
+      {
+        "rank": 3,
+        "predictor": "Party Affiliation",
+        "r_squared": 0.049,
+        "variance_pct": 4.9
+      },
+      {
+        "rank": 4,
+        "predictor": "Region",
+        "eta_squared": 0.112,
+        "variance_pct": 11.2
+      }
+    ]
+  }
+}
